@@ -41,6 +41,11 @@ npm run build
 npm test
 ```
 
+## Auto Run Test
+```bash
+npm run test-auto
+```
+
 ## Run
 ```bash
 npm start

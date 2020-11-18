@@ -8,7 +8,8 @@
     "debug": "node --inspect-brk ./target/index.js",
     "serve": "node ./target/index.js",
     "start": "nodemon --exec babel-node ./source/index.js",
-    "test": "mocha --require @babel/register"
+    "test": "mocha --require @babel/register",
+    "test-auto":  "mocha --require @babel/register -w --recursive"
   },
   "repository": {
     "type": "git",
