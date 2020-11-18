@@ -1,4 +1,4 @@
-# JavaScript-TDD-2020
+# JavaScript TDD 2020
 - JavaScript TDD project scaffold for 2020
 - node.js JavaScript ES6 TDD project scaffold using Mocha + Chai
 
@@ -10,6 +10,7 @@
 - NVM v0.37
 - Node v15.2
 - NPM v7.0
+- Nodemon v2.0
 
 ## Developer Machine Setup
 ### Linux Operating System
@@ -22,14 +23,27 @@ source ~/.bash_profile
 nvm install v15.2.1
 ```
 
-## Test
+### Clone + Install
+- note: `project-name` is the name of your project/library.
 ```bash
-npm test
+git clone https://github.com/raydecastro/javascript-tdd-2020.git project-name
+cd project-name
+npm install
 ```
 
 ## Build
 ```bash
 npm run build
+```
+
+## Test
+```bash
+npm test
+```
+
+## Run
+```bash
+npm start
 ```
 
 ## License
