@@ -12,9 +12,9 @@
 - NPM v7.0
 
 ## Developer Machine Setup
-### linux operating system
-* open the terminal
-* install [nvm], [node], [npm] using the following commands:
+### Linux Operating System
+- Open the terminal
+- Install [nvm], [node], [npm] using the following commands:
 ```bash
 touch ~/.bash_profile
 curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.37.0/install.sh | bash
