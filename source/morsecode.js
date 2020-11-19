@@ -26,6 +26,10 @@ class MorseCode {
     generateSpaceBetweenWords() {
         return this.spaceBetweenWords;
     }
+
+    generateA() {
+        return this.dot + this.spaceBetweenSameLetter + this.dash;
+    }
 }
 
 export default MorseCode;
