@@ -43,9 +43,11 @@ describe("MorseCode", () => {
         expect(mc.generateSpaceBetweenWords().length).to.equal(7);
     });
 
-    it("shall generate an 'A' as '. ---' (dot dash)", () => {
+    it("shall generate letter 'A' as '. ---' [dot dash]", () => {
         let mc = new MorseCode();
 
-        expect(mc.generateA()).to.equal(". ---");
+        expect(mc.generateLetter('A')).to.equal(". ---");
+        expect(mc.generateLetter('a')).to.equal(". ---");
+
     });
 });

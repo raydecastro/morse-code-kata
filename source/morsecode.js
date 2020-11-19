@@ -27,8 +27,12 @@ class MorseCode {
         return this.spaceBetweenWords;
     }
 
-    generateA() {
-        return this.dot + this.spaceBetweenSameLetter + this.dash;
+    generateLetter(letter) {
+        switch(letter.toLowerCase()) {
+            case 'a': return this.dot + this.spaceBetweenSameLetter + this.dash;
+        }
+
+        return undefined;
     }
 }
 
