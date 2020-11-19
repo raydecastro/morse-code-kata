@@ -38,6 +38,11 @@ class MorseCode {
             case 'g': return this.generateMorseCodeLetter("--.");            
             case 'h': return this.generateMorseCodeLetter("....");
             case 'i': return this.generateMorseCodeLetter("..");
+            case 'j': return this.generateMorseCodeLetter(".---");
+            case 'k': return this.generateMorseCodeLetter("-.-");
+            case 'l': return this.generateMorseCodeLetter(".-..");
+            case 'm': return this.generateMorseCodeLetter("--");
+            case 'n': return this.generateMorseCodeLetter("-.");
         }
 
         return undefined;
