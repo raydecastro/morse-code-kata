@@ -1,7 +1,7 @@
 {
-  "name": "javascript-tdd-2020",
+  "name": "morse-code-kata",
   "version": "1.0.0",
-  "description": "javascript tdd scaffold 2020",
+  "description": "morse code kata",
   "main": "index.js",
   "scripts": {
     "build": "babel source --out-dir ./target --source-maps",
@@ -9,24 +9,23 @@
     "serve": "node ./target/index.js",
     "start": "nodemon --exec babel-node ./source/index.js",
     "test": "mocha --require @babel/register",
-    "test-auto":  "mocha --require @babel/register -w --recursive"
+    "test-auto": "mocha --require @babel/register -w --recursive"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/raydecastro/javascript-tdd-2020.git"
+    "url": "git+https://github.com/raydecastro/morse-code-kata.git"
   },
   "keywords": [
-    "javascript",
-    "tdd",
-    "scaffold",
-    "2020"
+    "morse",
+    "code",
+    "kata"
   ],
   "author": "ray castro",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/raydecastro/javascript-tdd-2020/issues"
+    "url": "https://github.com/raydecastro/morse-code-kata/issues"
   },
-  "homepage": "https://github.com/raydecastro/javascript-tdd-2020#readme",
+  "homepage": "https://github.com/raydecastro/morse-code-kata#readme",
   "devDependencies": {
     "@babel/cli": "^7.12.1",
     "@babel/core": "^7.12.3",
