@@ -21,4 +21,12 @@ describe("MorseCode", () => {
         expect(mc.generateDash()).to.equal("---");
         expect(mc.generateDash().length).to.equal(3);
     });
+
+    it("shall generate a space between the same letter as one unit", () => {
+        let mc = new MorseCode();
+
+        expect(mc.generateSpaceBetweenSameLetter()).to.equal(" ");
+        expect(mc.generateSpaceBetweenSameLetter().length).to.equal(1);
+    });
+
 });

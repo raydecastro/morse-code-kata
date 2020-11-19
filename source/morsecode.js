@@ -6,6 +6,10 @@ class MorseCode {
     generateDash() {
         return "---";
     }
+
+    generateSpaceBetweenSameLetter() {
+        return " ";
+    }
 }
 
 
