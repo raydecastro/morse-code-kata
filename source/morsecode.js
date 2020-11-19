@@ -34,6 +34,7 @@ class MorseCode {
             case 'c': return this.generateMorseCodeLetter("-.-.");
             case 'd': return this.generateMorseCodeLetter("-..");
             case 'e': return this.generateMorseCodeLetter(".");
+            case 'f': return this.generateMorseCodeLetter("..-.");
         }
 
         return undefined;
