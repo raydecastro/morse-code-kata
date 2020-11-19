@@ -10,7 +10,10 @@ class MorseCode {
     generateSpaceBetweenSameLetter() {
         return " ";
     }
-}
 
+    generateSpaceBetweenDifferentLetters() {
+        return "   ";
+    }
+}
 
 export default MorseCode;
