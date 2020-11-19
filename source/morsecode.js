@@ -30,6 +30,7 @@ class MorseCode {
     generateLetter(letter) {
         switch(letter.toLowerCase()) {
             case 'a': return this.dot + this.spaceBetweenSameLetter + this.dash;
+            case 'b': return this.dash + this.spaceBetweenSameLetter + this.dot + this.spaceBetweenSameLetter + this.dot + this.spaceBetweenSameLetter + this.dot;
         }
 
         return undefined;

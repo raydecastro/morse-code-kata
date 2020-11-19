@@ -49,6 +49,13 @@ describe("MorseCode", () => {
 
         expect(mc.generateLetter('A')).to.equal(expectedMorseCode);
         expect(mc.generateLetter('a')).to.equal(expectedMorseCode);
+    });
 
+    it("shall generate letter 'B' as '--- . . .' [dash dot dot dot]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- . . .";
+
+        expect(mc.generateLetter('B')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('b')).to.equal(expectedMorseCode);
     });
 });
