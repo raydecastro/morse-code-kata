@@ -3,6 +3,9 @@ class MorseCode {
         return ".";
     }
 
+    generateDash() {
+        return "---";
+    }
 }
 
 

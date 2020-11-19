@@ -14,4 +14,11 @@ describe("MorseCode", () => {
         expect(mc.generateDot()).to.equal(".");
         expect(mc.generateDot().length).to.equal(1);
     });
+
+    it("shall generate dash as three units", () => {
+        let mc = new MorseCode();
+
+        expect(mc.generateDash()).to.equal("---");
+        expect(mc.generateDash().length).to.equal(3);
+    });
 });
