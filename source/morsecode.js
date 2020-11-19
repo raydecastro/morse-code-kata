@@ -1,18 +1,30 @@
 class MorseCode {
+    constructor() {
+        this.dot = ".";
+        this.dash = "---";
+        this.spaceBetweenSameLetter = " ";
+        this.spaceBetweenDifferentLetters = "   ";
+        this.spaceBetweenWords = "       ";
+    }
+
     generateDot() {
-        return ".";
+        return this.dot;
     }
 
     generateDash() {
-        return "---";
+        return this.dash;
     }
 
     generateSpaceBetweenSameLetter() {
-        return " ";
+        return this.spaceBetweenSameLetter;
     }
 
     generateSpaceBetweenDifferentLetters() {
-        return "   ";
+        return this.spaceBetweenDifferentLetters;
+    }
+
+    generateSpaceBetweenWords() {
+        return this.spaceBetweenWords;
     }
 }
 

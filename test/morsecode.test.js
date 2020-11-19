@@ -35,4 +35,11 @@ describe("MorseCode", () => {
         expect(mc.generateSpaceBetweenDifferentLetters()).to.equal("   ");
         expect(mc.generateSpaceBetweenDifferentLetters().length).to.equal(3);
     });
+
+    it("shall generate space between words as seven units", () => {
+        let mc = new MorseCode();
+
+        expect(mc.generateSpaceBetweenWords()).to.equal("       ");
+        expect(mc.generateSpaceBetweenWords().length).to.equal(7);
+    });
 });
