@@ -1,5 +1,15 @@
 # Morse Code Kata
-- TBD
+## International Morse Code
+- The length of a dot is one unit.
+- A dash is three units.
+- The space between parts of the same letter is one unit.
+- The space between letters is three units.
+- The space between words is seven units.
+
+- A . ---
+- B --- . . .
+- C --- . --- .
+- D --- . .
 
 ## Technologies
 - JavaScript ES6 
