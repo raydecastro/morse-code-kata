@@ -29,14 +29,29 @@ class MorseCode {
 
     generateLetter(letter) {
         switch(letter.toLowerCase()) {
-            case 'a': return this.dot + this.spaceBetweenSameLetter + this.dash;
-            case 'b': return this.dash + this.spaceBetweenSameLetter + this.dot 
-              + this.spaceBetweenSameLetter + this.dot + this.spaceBetweenSameLetter + this.dot;
-            case 'c': return this.dash + this.spaceBetweenSameLetter + this.dot 
-              + this.spaceBetweenSameLetter + this.dash + this.spaceBetweenSameLetter + this.dot;
+            case 'a': return this.generateMorseCodeLetter(".-");
+            case 'b': return this.generateMorseCodeLetter("-..."); 
+            case 'c': return this.generateMorseCodeLetter("-.-.");
         }
 
         return undefined;
+    }
+
+    generateMorseCodeLetter(inputAsDotDash) {
+        let morseCodeLetter = "";
+        for (let i = 0; i < inputAsDotDash.length; i += 1) {
+            let code = inputAsDotDash.charAt(i);
+            switch(code) {
+                case '.': morseCodeLetter += this.dot; break;
+                case '-': morseCodeLetter += this.dash; break;
+            }
+
+            if (i < inputAsDotDash.length - 1) {
+                morseCodeLetter += this.spaceBetweenSameLetter;
+            }
+        }
+
+        return morseCodeLetter;
     }
 }
 
