@@ -7,4 +7,11 @@ describe("MorseCode", () => {
 
         expect(mc).to.not.be.undefined;
     });
+
+    it("shall generate a dot as one unit", () => {
+        let mc = new MorseCode();
+
+        expect(mc.generateDot()).to.equal(".");
+        expect(mc.generateDot().length).to.equal(1);
+    });
 });
