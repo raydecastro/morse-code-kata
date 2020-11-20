@@ -43,6 +43,7 @@ class MorseCode {
             case 'l': return this.generateMorseCodeLetter(".-..");
             case 'm': return this.generateMorseCodeLetter("--");
             case 'n': return this.generateMorseCodeLetter("-.");
+            case 'o': return this.generateMorseCodeLetter("---");
         }
 
         return undefined;
