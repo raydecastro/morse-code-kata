@@ -321,12 +321,21 @@ describe("MorseCode", () => {
         expect(mc.generateLetter('0')).to.equal(expectedMorseCode);
     });
 
-    it("shall generate sentence 'cat is in the hut' as "
-        + "'--- . --- .   . ---   ---       . .   . . .       . .   --- .       ---   . . . .   .       . . . .   . . ---   ---'"
+    it("shall generate sentence 'cat is in the hut' as '--- . --- .   . ---   ---       '\n"
+        + "\t'. .   . . .       . .   --- .       ---   . . . .   .       . . . .   . . ---   ---'"
         , () => {
         let mc = new MorseCode();
         let expectedMorseCode = "--- . --- .   . ---   ---       . .   . . .       . .   --- .       ---   . . . .   .       . . . .   . . ---   ---";
 
         expect(mc.generate('cat is in the hut')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate sentence 'rock and roll' as '. --- .   --- --- ---   --- . --- .   --- . ---       '\n"
+        + "\t'. ---   --- .   --- . .       . --- .   --- --- ---   . --- . .   . --- . .'"
+        , () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". --- .   --- --- ---   --- . --- .   --- . ---       . ---   --- .   --- . .       . --- .   --- --- ---   . --- . .   . --- . .";
+
+        expect(mc.generate('rock and roll')).to.equal(expectedMorseCode);
     });
 });
