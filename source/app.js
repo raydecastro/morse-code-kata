@@ -1,10 +1,14 @@
+import MorseCode from "./morsecode.js";
+
 class App {
     constructor() {
-        this.love = "the most powerful force in the universe.";
+        this.love = "love is the most powerful force in the universe";
     }
 
     run() {
-        console.log(".love> is " + this.love);
+        let mc = new MorseCode();
+        
+        console.log(mc.generate(this.love));
         return true; 
     }
 }
