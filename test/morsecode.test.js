@@ -350,13 +350,14 @@ describe("MorseCode", () => {
         expect(mc.generate('the quick brown foxy')).to.equal(expectedMorseCode);
     });
 
-    it("shall parse morse code: '--- . --- .   . --- . .   .   . ---   . --- .       --- . --- ---   --- --- ---   . . ---   . --- .       --- ---   . .   --- .   --- . .'\n"
-    + "\tto: 'clear your mind'"
-    , () => {
-    let mc = new MorseCode();
-    let inputMorse = "--- . --- .   . --- . .   .   . ---   . --- .       --- . --- ---   --- --- ---   . . ---   . --- .       --- ---   . .   --- .   --- . ."
-    let expectedSentence = "clear your mind";
+    it("shall parse morse code: '--- . --- .   . --- . .   .   . ---   . --- .       '\n"
+        + "\t'--- . --- ---   --- --- ---   . . ---   . --- .       --- ---   . .   --- .   --- . .'\n"
+        + "\tto: 'clear your mind'"
+        , () => {
+        let mc = new MorseCode();
+        let inputMorse = "--- . --- .   . --- . .   .   . ---   . --- .       --- . --- ---   --- --- ---   . . ---   . --- .       --- ---   . .   --- .   --- . ."
+        let expectedSentence = "clear your mind";
 
-    expect(mc.parse(inputMorse)).to.equal(expectedSentence);
-});
+        expect(mc.parse(inputMorse)).to.equal(expectedSentence);
+    });
 });
