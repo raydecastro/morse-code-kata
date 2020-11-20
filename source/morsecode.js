@@ -44,9 +44,20 @@ class MorseCode {
             case 'm': return this.generateMorseCodeLetter("--");
             case 'n': return this.generateMorseCodeLetter("-.");
             case 'o': return this.generateMorseCodeLetter("---");
+            case 'p': return this.generateMorseCodeLetter(".--.");
+            case 'q': return this.generateMorseCodeLetter("--.-");
+            case 'r': return this.generateMorseCodeLetter(".-.");
+            case 's': return this.generateMorseCodeLetter("...");
+            case 't': return this.generateMorseCodeLetter("-");
+            case 'u': return this.generateMorseCodeLetter("..-");
+            case 'v': return this.generateMorseCodeLetter("...-");
+            case 'w': return this.generateMorseCodeLetter(".--");
+            case 'x': return this.generateMorseCodeLetter("-..-");
+            case 'y': return this.generateMorseCodeLetter("-.--");
+            case 'z': return this.generateMorseCodeLetter("--..");
         }
 
-        return undefined;
+        throw new Error("Letter not yet implemented");
     }
 
     generateMorseCodeLetter(inputAsDotDash) {

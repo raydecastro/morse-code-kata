@@ -162,4 +162,92 @@ describe("MorseCode", () => {
         expect(mc.generateLetter('O')).to.equal(expectedMorseCode);
         expect(mc.generateLetter('o')).to.equal(expectedMorseCode);
     });
+
+    it("shall generate letter 'P' as '. --- --- .' [dot dash dash dot]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". --- --- .";
+
+        expect(mc.generateLetter('P')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('p')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'Q' as '--- --- . ---' [dash dash dot dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- --- . ---";
+
+        expect(mc.generateLetter('Q')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('q')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'R' as '. --- .' [dot dash dot]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". --- .";
+
+        expect(mc.generateLetter('R')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('r')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'S' as '. . .' [dot dot dot]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". . .";
+
+        expect(mc.generateLetter('S')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('s')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'T' as '---' [dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "---";
+
+        expect(mc.generateLetter('T')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('t')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'U' as '. . ---' [dot dot dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". . ---";
+
+        expect(mc.generateLetter('U')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('u')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'V' as '. . . ---' [dot dot dot dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". . . ---";
+
+        expect(mc.generateLetter('V')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('v')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'W' as '. --- ---' [dot dash dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = ". --- ---";
+
+        expect(mc.generateLetter('W')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('w')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'X' as '--- . . ---' [dash dot dot dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- . . ---";
+
+        expect(mc.generateLetter('X')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('x')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'Y' as '--- . --- ---' [dash dot dash dash]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- . --- ---";
+
+        expect(mc.generateLetter('Y')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('y')).to.equal(expectedMorseCode);
+    });
+
+    it("shall generate letter 'Z' as '--- --- . .' [dash dash dot dot]", () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- --- . .";
+
+        expect(mc.generateLetter('Z')).to.equal(expectedMorseCode);
+        expect(mc.generateLetter('z')).to.equal(expectedMorseCode);
+    });
 });
