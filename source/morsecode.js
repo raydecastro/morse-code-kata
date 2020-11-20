@@ -55,6 +55,16 @@ class MorseCode {
             case 'x': return this.generateMorseCodeLetter("-..-");
             case 'y': return this.generateMorseCodeLetter("-.--");
             case 'z': return this.generateMorseCodeLetter("--..");
+            case '1': return this.generateMorseCodeLetter(".----");
+            case '2': return this.generateMorseCodeLetter("..---");
+            case '3': return this.generateMorseCodeLetter("...--");
+            case '4': return this.generateMorseCodeLetter("....-");
+            case '5': return this.generateMorseCodeLetter(".....");
+            case '6': return this.generateMorseCodeLetter("-....");
+            case '7': return this.generateMorseCodeLetter("--...");
+            case '8': return this.generateMorseCodeLetter("---..");
+            case '9': return this.generateMorseCodeLetter("----.");
+            case '0': return this.generateMorseCodeLetter("-----");
         }
 
         throw new Error("Letter not yet implemented");
