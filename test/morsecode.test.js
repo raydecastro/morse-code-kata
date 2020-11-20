@@ -360,4 +360,17 @@ describe("MorseCode", () => {
 
         expect(mc.parse(inputMorse)).to.equal(expectedSentence);
     });
+
+    it("shall parse morse code: '---   . . . .   .       '\n"
+        + "\t'--- --- . ---   . . ---   . .   --- . --- .   --- . ---       '\n"
+        + "\t'--- . . .   . --- .   --- --- ---   . --- ---   --- .       '\n"
+        + "\t'. . --- .   --- --- ---   --- . . ---   --- . --- ---'\n"
+        + "\tto: 'the quick brown foxy'"
+        , () => {
+        let mc = new MorseCode();
+        let inputMorse = "---   . . . .   .       --- --- . ---   . . ---   . .   --- . --- .   --- . ---       --- . . .   . --- .   --- --- ---   . --- ---   --- .       . . --- .   --- --- ---   --- . . ---   --- . --- ---";
+        let expectedSentence = "the quick brown foxy";
+
+        expect(mc.parse(inputMorse)).to.equal(expectedSentence);
+    });
 });
