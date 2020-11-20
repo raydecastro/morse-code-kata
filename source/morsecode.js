@@ -51,19 +51,25 @@ class MorseCode {
 
     generateMorseCodeLetter(inputAsDotDash) {
         let morseCodeLetter = "";
-        for (let i = 0; i < inputAsDotDash.length; i += 1) {
+
+        for (let i = 0; i < inputAsDotDash.length; i +=  1) {
             let code = inputAsDotDash.charAt(i);
+
             switch(code) {
                 case '.': morseCodeLetter += this.dot; break;
                 case '-': morseCodeLetter += this.dash; break;
             }
 
-            if (i < inputAsDotDash.length - 1) {
+            if (this.isIndexNotTheLastOne(i, inputAsDotDash)) {
                 morseCodeLetter += this.spaceBetweenSameLetter;
             }
         }
 
         return morseCodeLetter;
+    }
+
+    isIndexNotTheLastOne(i, inputAsDotDash) {
+        return i < inputAsDotDash.length - 1;
     }
 }
 
