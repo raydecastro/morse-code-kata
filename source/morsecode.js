@@ -104,7 +104,7 @@ class MorseCode {
 
             if ( this.isNotTheLastCharacter(i, sentence) 
               && this.isNextCharacterNotASpace(sentence, i) 
-              && this.IsCurrentLetterASpace(letter) ) {
+              && this.isCurrentLetterASpace(letter) ) {
                 morseCodeSentence += this.generateSpaceBetweenDifferentLetters();
             }
         }
@@ -120,7 +120,7 @@ class MorseCode {
         return sentence.charAt(i + 1) !== ' ';
     }
 
-    IsCurrentLetterASpace(letter) {
+    isCurrentLetterASpace(letter) {
         return letter !== ' ';
     }
 }
