@@ -102,12 +102,26 @@ class MorseCode {
 
             morseCodeSentence += this.generateLetter(letter);
 
-            if ((i < sentence.length - 1) && sentence.charAt(i + 1) !== ' ' && letter !== ' ') {
+            if ( this.isNotTheLastCharacter(i, sentence) 
+              && this.isNextCharacterNotASpace(sentence, i) 
+              && this.IsCurrentLetterASpace(letter) ) {
                 morseCodeSentence += this.generateSpaceBetweenDifferentLetters();
             }
         }
 
         return morseCodeSentence;
+    }
+
+    isNotTheLastCharacter(i, sentence) {
+        return i < sentence.length - 1;
+    }
+
+    isNextCharacterNotASpace(sentence, i) {
+        return sentence.charAt(i + 1) !== ' ';
+    }
+
+    IsCurrentLetterASpace(letter) {
+        return letter !== ' ';
     }
 }
 
