@@ -320,4 +320,13 @@ describe("MorseCode", () => {
 
         expect(mc.generateLetter('0')).to.equal(expectedMorseCode);
     });
+
+    it("shall generate sentence 'cat is in the hut' as "
+        + "'--- . --- .   . ---   ---       . .   . . .       . .   --- .       ---   . . . .   .       . . . .   . . ---   ---'"
+        , () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "--- . --- .   . ---   ---       . .   . . .       . .   --- .       ---   . . . .   .       . . . .   . . ---   ---";
+
+        expect(mc.generate('cat is in the hut')).to.equal(expectedMorseCode);
+    });
 });

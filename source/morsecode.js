@@ -65,6 +65,7 @@ class MorseCode {
             case '8': return this.generateMorseCodeLetter("---..");
             case '9': return this.generateMorseCodeLetter("----.");
             case '0': return this.generateMorseCodeLetter("-----");
+            case ' ': return this.generateSpaceBetweenWords();
         }
 
         throw new Error("Letter not yet implemented");
@@ -91,6 +92,22 @@ class MorseCode {
 
     isIndexNotTheLastOne(i, inputAsDotDash) {
         return i < inputAsDotDash.length - 1;
+    }
+
+    generate(sentence) {
+        let morseCodeSentence = "";
+
+        for (let i = 0; i < sentence.length; i += 1) {
+            let letter = sentence.charAt(i);
+
+            morseCodeSentence += this.generateLetter(letter);
+
+            if ((i < sentence.length - 1) && sentence.charAt(i + 1) !== ' ' && letter !== ' ') {
+                morseCodeSentence += this.generateSpaceBetweenDifferentLetters();
+            }
+        }
+
+        return morseCodeSentence;
     }
 }
 
