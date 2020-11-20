@@ -338,4 +338,15 @@ describe("MorseCode", () => {
 
         expect(mc.generate('rock and roll')).to.equal(expectedMorseCode);
     });
+
+    it("shall generate sentence 'the quick brown foxy' as '---   . . . .   .       '\n"
+        + "\t'--- --- . ---   . . ---   . .   --- . --- .   --- . ---       '\n"
+        + "\t'--- . . .   . --- .   --- --- ---   . --- ---   --- .       '\n"
+        + "\t'. . --- .   --- --- ---   --- . . ---   --- . --- ---'"
+        , () => {
+        let mc = new MorseCode();
+        let expectedMorseCode = "---   . . . .   .       --- --- . ---   . . ---   . .   --- . --- .   --- . ---       --- . . .   . --- .   --- --- ---   . --- ---   --- .       . . --- .   --- --- ---   --- . . ---   --- . --- ---";
+
+        expect(mc.generate('the quick brown foxy')).to.equal(expectedMorseCode);
+    });
 });
