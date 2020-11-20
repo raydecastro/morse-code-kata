@@ -1,4 +1,4 @@
-class MorseCode {
+class MorseCodeGenerator {
     constructor() {
         this.dot = ".";
         this.dash = "---";
@@ -123,68 +123,6 @@ class MorseCode {
     isCurrentLetterASpace(letter) {
         return letter !== " ";
     }
-
-    parse(morseCode) {
-        let sentence = "";
-        let words = morseCode.split(this.generateSpaceBetweenWords());
-
-        words.forEach((word, index, words) => {
-            let letters = word.split(this.generateSpaceBetweenDifferentLetters());
-
-            letters.forEach(letter => {
-                sentence += this.parseMorseCodeLetter(letter);
-            });
-
-            if (index < words.length - 1) {
-                sentence += " ";
-            }
-        });
-
-        return sentence;
-    }
-
-    parseMorseCodeLetter(morseCodeLetter) {
-        let morseCodeToLetterHashTable = {
-            ". ---": "a",
-            "--- . . .": "b",
-            "--- . --- .": "c",
-            "--- . .": "d",
-            ".": "e",
-            ". . --- .": "f",
-            "--- --- .": "g",             
-            ". . . .": "h",
-            ". .": "i",
-            ". --- --- ---": "j",
-            "--- . ---": "k",
-            ". --- . .": "l",   
-            "--- ---": "m",
-            "--- .": "n", 
-            "--- --- ---": "o",
-            ". --- --- .": "p",
-            "--- --- . ---": "q", 
-            ". --- .": "r", 
-            ". . .": "s", 
-            "---": "t", 
-            ". . ---": "u", 
-            ". . . ---": "v", 
-            ". --- ---": "w", 
-            "--- . . ---": "x", 
-            "--- . --- ---": "y", 
-            "--- --- . .": "z", 
-            ". --- --- --- ---": "1", 
-            ". . --- --- ---": "2", 
-            ". . . --- ---": "3", 
-            ". . . . ---": "4", 
-            ". . . . .": "5", 
-            "--- . . . .": "6", 
-            "--- --- . . .": "7", 
-            "--- --- --- . .": "8", 
-            "--- --- --- --- .": "9", 
-            "--- --- --- --- ---": "0"
-        };
-
-        return morseCodeToLetterHashTable[morseCodeLetter];
-    }
 }
 
-export default MorseCode;
+export default MorseCodeGenerator;

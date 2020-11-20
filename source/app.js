@@ -1,4 +1,4 @@
-import MorseCode from "./morsecode.js";
+import MorseCodeGenerator from "./morsecodegenerator.js";
 
 class App {
     constructor() {
@@ -6,9 +6,9 @@ class App {
     }
 
     run() {
-        let mc = new MorseCode();
+        let mcg = new MorseCodeGenerator();
         
-        console.log(mc.generate(this.love));
+        console.log(mcg.generate(this.love));
         return true; 
     }
 }
