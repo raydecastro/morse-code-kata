@@ -78,12 +78,12 @@ class MorseCode {
             let code = inputAsDotDash.charAt(i);
 
             switch(code) {
-                case '.': morseCodeLetter += this.dot; break;
-                case '-': morseCodeLetter += this.dash; break;
+                case '.': morseCodeLetter += this.generateDot(); break;
+                case '-': morseCodeLetter += this.generateDash(); break;
             }
 
             if (this.isIndexNotTheLastOne(i, inputAsDotDash)) {
-                morseCodeLetter += this.spaceBetweenSameLetter;
+                morseCodeLetter += this.generateSpaceBetweenSameLetter();
             }
         }
 
