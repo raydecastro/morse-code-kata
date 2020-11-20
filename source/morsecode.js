@@ -126,22 +126,19 @@ class MorseCode {
 
     parse(morseCode) {
         let sentence = "";
-
         let words = morseCode.split(this.generateSpaceBetweenWords());
 
-        for (let i = 0; i < words.length; i += 1) {
-            let word = words[i];
+        words.forEach((word, index, words) => {
             let letters = word.split(this.generateSpaceBetweenDifferentLetters());
 
-            for (let j = 0; j < letters.length; j += 1) {
-                let letter = letters[j];
+            letters.forEach(letter => {
                 sentence += this.parseMorseCodeLetter(letter);
-            }
+            });
 
-            if (i < words.length - 1) {
+            if (index < words.length - 1) {
                 sentence += " ";
             }
-        }
+        });
 
         return sentence;
     }
@@ -183,7 +180,9 @@ class MorseCode {
             "--- --- . . .": "7", 
             "--- --- --- . .": "8", 
             "--- --- --- --- .": "9", 
-            "--- --- --- --- ---": "0"
+            "--- --- --- --- ---": "0",
+            "       ": " ",
+            "   ": ""
         };
 
         return morseCodeToLetterHashTable[morseCodeLetter];
